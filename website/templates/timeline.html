@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block custom_js %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/timeline.js"></script>
+{% endblock custom_js %}
+
+{% block title %}
+Home page !
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row-fluid">
+  <div class="span3">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header"><button class="btn newbtn" data-toggle="collapse" data-target="#timelineform">New</button></li>
+        <form action="post" name="timelineform" id="timelineform" class="collapse">
+	  <label>Date start</label>
+	  <input type="text" name="startdate" class="input span12"/>
+	  <label>Date end</label>
+	  <input type="text" name="startend" class="input span12"/>
+	  <label>Title</label>
+	  <input type="text" name="title" class="input span12"/>
+	  <label>Text</label>
+	  <input type="text" name="text" class="input span12"/>
+	  <label>Media</label>
+	  <input type="text" name="media" class="input span12"/>
+	</form>
+	<li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="nav-header">Sidebar</li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="nav-header">Sidebar</li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="nav-header">Sidebar</li>
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="nav-header">Sidebar</li>
+      </ul>
+    </div><!--/.well -->
+  </div><!--/span-->
+    
+  <div class="span9">
+<!--
+    <div id="timeline-embed"></div>
+    <script type="text/javascript">
+      var timeline_config = {
+	  width: "100%",
+	  height: "100%",
+	  source: '{{ STATIC_URL }}timelinejs/examples/example_kitchensink.json',
+	  //start_at_end:	true,					//OPTIONAL
+	  //hash_bookmark: true,					//OPTIONAL
+	  css: 	'{{ STATIC_URL }}timelinejs/compiled/css/timeline.css',	//OPTIONAL
+	  js: 	'{{ STATIC_URL }}timelinejs/compiled/js/timeline-min.js'	//OPTIONAL
+      }
+    </script>
+    <script type="text/javascript" src="{{ STATIC_URL}}timelinejs/compiled/js/timeline-embed.js"></script>
+-->  
+
+  </div>
+    
+</div><!--/row-->
+
+{% endblock %}

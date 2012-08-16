@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block custom_js %}
+<script src="{{ STATIC_URL }}raptor/packages/raptor.0deps.min.js"></script>
+
+<script type="text/javascript">
+  jQuery(function($) {
+  $('.editable').editor({
+      autoEnable: true,            // Enable the editor automaticly
+      plugins: {                   // Plugin options
+          dock: {                  // Dock specific plugin options
+              docked: true,        // Start the editor already docked
+              dockToElement: true, // Dock the editor inplace of the element
+  persist: false       // Do not save the docked state
+  }
+    }
+  });
+  });
+</script>
+
+{% endblock custom_js %}
+
+{% block title %}
+Home page !
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row-fluid">
+  <div class="span2">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Sidebar</li>
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="nav-header">Sidebar</li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="nav-header">Sidebar</li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div><!--/.well -->
+  </div><!--/span-->
+  <div class="span9">
+
+    <div class="editable" style="min-height: 50%;"></div>
+
+  </div><!--/span-->
+</div><!--/row-->
+
+{% endblock %}

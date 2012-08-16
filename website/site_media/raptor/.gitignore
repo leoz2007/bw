@@ -1,0 +1,8 @@
+*.sass-cache*
+js-doc
+tagging
+plugins-extra
+translation-status.html
+/build/
+/nbproject/
+/src/plugins-extra/
